@@ -1,0 +1,849 @@
+@font-face {
+    font-family: 'darker_grotesqueblack';
+    src: url('darkergrotesque-black-webfont.woff2') format('woff2'),
+         url('darkergrotesque-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'darker_grotesquebold';
+    src: url('darkergrotesque-bold-webfont.woff2') format('woff2'),
+         url('darkergrotesque-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'darker_grotesqueextrabold';
+    src: url('darkergrotesque-extrabold-webfont.woff2') format('woff2'),
+         url('darkergrotesque-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'darker_grotesquelight';
+    src: url('darkergrotesque-light-webfont.woff2') format('woff2'),
+         url('darkergrotesque-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'darker_grotesquemedium';
+    src: url('darkergrotesque-medium-webfont.woff2') format('woff2'),
+         url('darkergrotesque-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'darker_grotesqueregular';
+    src: url('darkergrotesque-regular-webfont.woff2') format('woff2'),
+         url('darkergrotesque-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'darker_grotesquesemibold';
+    src: url('darkergrotesque-semibold-webfont.woff2') format('woff2'),
+         url('darkergrotesque-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+body, ul {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'darker_grotesqueregular';
+    
+}
+
+    @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+    }
+    @-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+    }
+    @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+
+
+.fadeIn {
+    -webkit-animation: fadeIn 3s ease-in-out;
+    -moz-animation: fadeIn 3s ease-in-out;
+    -o-animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 3s ease-in-out;
+}
+
+a {
+    color: #1A2C3A;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+
+
+#header {
+    background-image: linear-gradient(to bottom, #FFF 20%, transparent 80%);
+    border-top: 5px solid rgb(223, 59, 105);
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    position: relative;
+}
+
+
+
+
+
+#menu {
+    display: inline-flex;
+    list-style: none;
+    gap: .9rem;
+}
+
+#menu a {
+    text-align: center;
+    display: block;
+    padding: .5rem;
+}
+
+#menu a:hover {
+    border-bottom: 2px solid #DF8080;
+    border-radius: 1px;
+}
+
+#menu #subLogo {
+    padding: 0 3rem;
+    
+}
+
+#menu #subLogo a{
+    display: none;
+}
+
+
+
+#menu .menuRede {
+    width: 32px;
+    text-align: center;
+    border: 1px solid rgb(27, 44, 57);
+    border-radius: 20px;
+}
+
+#menu .menuRede a:hover {
+    border: none
+}
+
+
+
+
+#btn-mobile {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+    
+    
+    #menu {
+        display: block; 
+        position: absolute;
+        width: 80%;
+        top: 0px;
+        left: 0px;
+        background: rgb(27, 44, 57);
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+
+    #menu #subLogo {
+        width: 100%;
+        padding: 0
+    }
+
+    #menu #subLogo a{
+        display: block;
+        font-size: 42px;
+        font-weight: bold;
+        text-align: center;
+        color: #3F5F77;
+    }
+
+    #menu .menuRede {
+        width: 48px;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 30px;
+        margin: 0 0.1rem;
+    }
+
+    #menu .menuRede a{
+        padding: 15px 0;
+    }
+    
+
+   
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburger::after, #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        color: rgb(223, 59, 105);
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+        color: rgb(223, 59, 105);
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+
+}
+
+
+
+/*      BANNER          */
+#banner {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/bgHome.png');
+    z-index: 10;
+    position: relative;
+    margin-top: -70px;
+}
+
+
+#detBanner {
+    width: 49%;
+    display: inline-block;
+}
+
+#detBanner h1{
+    font-size: 52px;
+    color: #1A2C3A;
+    text-shadow: -1px -1px white, 2px 2px #DF8080;
+    display: inline-block;
+    margin: 30px 0 0 10%;
+}
+
+
+
+#detBanner p{
+    display: inline-block;
+    margin: 30px 0 0 10%;
+    
+}
+
+#linkBanner {
+    background-color: #EB3768;
+    color: #FFF;
+    width: 150px;
+    text-align: center;
+    display: block;
+    border-radius: 15px 15px 25px 15px;
+    padding: 15px 0;
+    margin: 20px 0 0 10%;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 400ms ease;
+}
+
+
+
+#linkBanner::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 15px;
+    text-align: center;
+    border-radius: 10px 15px 25px 15px;
+    background-color: #1A2C3A;
+    transition: all 1s ease;
+}
+
+#linkBanner:hover:before {
+    content: 'Let`s Go';
+    width: 0px;
+    height: 20px;
+    padding: 15px 0px;
+    width: 100%;
+}
+
+#imageBanner {
+    width: 50%;
+    display: inline-block;
+}
+
+#imageBanner img {
+    width: 100%;
+    margin: 108px 0 -108px 9px;
+
+    
+}
+
+
+@media (max-width: 600px) {
+    #banner {
+        background-image: none;
+        margin-top: 0px;
+    }
+    #detBanner {
+        width: 100%;
+    }
+    #detBanner h1{
+        font-size: 36px;
+        padding: 0px;
+    }
+
+    #detBanner p{
+        font-size: 14px;
+        padding: 0px;
+    }
+    
+    #imageBanner {
+        width: 100%;
+    }
+    #imageBanner img {
+        margin: 0px;
+    }
+}
+
+
+
+/*         GAMES       */
+
+#games {
+    width: 100%;
+    display: block;
+}
+
+#detGame {
+    width: 100%;
+    display: block;
+}
+
+#detGame h1 {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#detGame p {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#contGame {
+    width: 80%;
+    display: block;
+    padding: 0 10% 0 10%;
+}
+
+.gamesImp {
+    width: 31%;
+    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 5px 8px 18px #CCC;
+    margin-bottom: 20px;
+}
+
+.gamesPar {
+    width: 31%;
+    display: inline-block;
+    margin: 0 2% 0 2%;
+    border-radius: 15px;
+    box-shadow: 5px 8px 18px #CCC;
+    margin-bottom: 20px;
+}
+
+.bggameImp {
+    width: 100%;
+    height: 230px;
+    align-items: center;
+    background-image: url('../img/Cooke-Jam_BG.png');
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.bggameImp img {
+    width: 100%;
+    height: 230px;
+    
+}
+
+.bggamePar {
+    width: 100%;
+    height: 230px;
+    background-image: url('../img/Panda_Pop_BG.png');
+    border-radius: 15px;
+}
+
+.bggamePar img {
+    width: 100%;
+}
+
+.zoom {
+	overflow: hidden;
+}
+
+.zoom img {
+	max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.zoom:hover img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.detGames h2 {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0 0 0;
+}
+
+.detGames p {
+    text-align: center;
+    margin: 5px 0 10px 0;
+}
+
+.detGames p a {
+    font-size: 12px;
+    color: #E13868;
+}
+
+#cont-btnGame {
+    width: 100%;
+    display: block;
+    margin: 50px 0;
+}
+
+#cont-btnGame p {
+    text-align: center;
+}
+
+#btnGames {
+    background-color: #EB3768;
+    color: #FFF;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 10px 15px 25px 15px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 400ms ease;
+}
+
+
+#btnGames::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 60px;
+    text-align: center;
+    border-radius: 10px 15px 25px 15px;
+    background-color: #1A2C3A;
+    transition: all 1s ease;
+}
+
+#btnGames:hover:before {
+    content: 'Let`s Go';
+    width: 0px;
+    height: 20px;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+
+@media (max-width: 600px) { 
+    .gamesImp {
+        width: 100%;
+    }
+
+    .gamesPar{
+        width: 100%;
+    }
+}
+
+
+
+/*         TEAM       */
+
+#team {
+    width: 100%;
+    display: block;
+    background-color: #f2f2f2;
+    padding-top: 30px;
+}
+
+#detTeam {
+    width: 100%;
+    display: block;
+}
+
+#detTeam h1 {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#detTeam p {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+#contTeam {
+    width: 100%;
+    display: block;
+    margin-top: -100px;
+}
+
+#team1 {
+    width: 36%;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+#team1 img {
+    width: 100%;
+    margin-bottom: -20px;
+}
+
+#team2 {
+    width: 52%;
+    display: inline-block;
+    margin: 0px -5% 0px -10%;
+    padding: 0px;
+    border: 0px;
+}
+
+#team2 img {
+    width: 100%;
+    display: flex;
+    z-index: 9;
+    position: relative;
+    margin: 170px 0 -170px 0;
+}
+
+#team2 p {
+    text-align: center;
+    z-index: 19;
+    position: relative;
+    bottom: -127px;
+}
+
+#btnTeam {
+    background-color: #E13868;
+    color: #FFF;
+    padding: 15px 35px;
+    border-radius: 10px 15px 25px 15px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 400ms ease;
+}
+
+
+
+#btnTeam::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 15px;
+    text-align: center;
+    border-radius: 10px 15px 25px 15px;
+    background-color: #1A2C3A;
+    transition: all 1s ease;
+}
+
+#btnTeam:hover:before {
+    content: 'Let`s Go';
+    width: 0px;
+    height: 20px;
+    padding: 15px 0px;
+    width: 100%;
+}
+
+
+
+#team3 {
+    width: 26%;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+#team3 img {
+    width: 100%;
+    margin-bottom: -20px;
+}
+
+@media (max-width: 600px) { 
+    #team1 {
+        width: 34%;
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    #team2 {
+        width: 52%;
+        display: inline-block;
+        margin: 0px -5% 0px -10%;
+        padding: 0px;
+        border: 0px;
+    }
+    #team3 {
+        width: 26%;
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+}
+
+
+
+
+/*        FOOTER          */
+
+#footer {
+    width: 100%;
+    background-color: #1A2C3A;
+    color: #FFF;
+    float: left;
+    display: block;
+    margin-top: 200px;
+}
+
+#mapaFooter {
+    width: 40%;
+    right: 0px;
+    float: right;
+    display: block;
+}
+
+#contFooter {
+    width: 60%;
+    float: left;
+    display: block;
+    margin-top: 5%;
+}
+
+#socialFooter {
+    width: 40%;
+    float: left;
+    display: block;
+    list-style: none;
+    margin-left: 10%;
+}
+#socialFooter ul li {
+    width: 18px;
+    float: left;
+    display: block;
+    text-align: center;
+    list-style: none;
+    margin: 0px 5px;
+    padding: 10px;
+}
+
+
+#socialFooter ul li a {
+    color: #FFF;
+    width: 18px;
+    float: left;
+    display: block;
+    text-align: center;
+    border: 1px solid #FFF;
+    list-style: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#socialFooter ul li a:hover {
+    color: #E13868;
+    border: 1px solid #E13868;
+}
+
+#logoFooter {
+    margin: 10px 10px;
+    left: 50%;
+}
+
+#menuFooter {
+    width: 50%;
+    float: left;
+    display: block;
+}
+
+#priMenu {
+    width: 50%;
+    float: left;
+    display: block;
+}
+
+#priMenu ul li {
+    margin: 20px 0;
+    list-style: none;
+}
+
+#priMenu ul li a {
+    color: #FFF;
+}
+#priMenu ul li a:hover {
+    border-bottom: 3px solid #E13868;
+}
+
+#segMenu {
+    width: 50%;
+    float: left;
+    display: block;
+}
+
+#segMenu ul li {
+    margin: 20px 0;
+    list-style: none;
+}
+
+#segMenu ul li a {
+    color: #FFF;
+}
+
+#segMenu ul li a:hover {
+    color: #E13868;
+}
+
+#termosFooter {
+    width: 95%;
+    float: left;
+    display: block;
+    padding: 0 5% 0 0;
+}
+
+@media (max-width: 600px) { 
+    #mapaFooter, #contFooter, #menuFooter,
+    #priMenu, #segMenu{
+        width: 100%;
+    }
+    #socialFooter {
+        width: 83%;
+        position: relative;
+        left: 7%;
+    }
+
+    #priMenu, #segMenu ul li {
+        text-align: center;
+    }
+    #termosFooter p {
+        text-align: center;
+        padding: 10px;
+    }
+}
